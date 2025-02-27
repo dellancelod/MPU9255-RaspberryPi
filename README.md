@@ -1,4 +1,4 @@
-# MPU9255-RaspberyPi
+# MPU9255-RaspberryPi
 Simple minimal functioning example of MPU-9255 for Raspbery Pi using **pigpio** library.
 
 # General Information
