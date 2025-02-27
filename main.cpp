@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <unistd.h> // for usleep
 #include "MPU9255.h"
 
@@ -35,7 +37,7 @@ int main() {
     std::cout << "MPU9255 initialized successfully." << std::endl;
 
     CalibrationData cal;
-    if (!loadCalibration("calibration.txt", cal)) {
+    if (!loadCalibration("calibration/calibration.txt", cal)) {
         std::cerr << "Calibration data not found. Run the calibration script first." << std::endl;
         return -1;
     }
