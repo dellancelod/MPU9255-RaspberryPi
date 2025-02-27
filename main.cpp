@@ -44,7 +44,7 @@ int main() {
 
     // Main loop: update sensor data and print computed angles.
     while(true){
-        mpu.update();
+        mpu.update(cal);
         std::cout << "Pitch: " << mpu.pitch 
                   << "  Roll: " << mpu.roll 
                   << "  Yaw: " << mpu.yaw << std::endl;
