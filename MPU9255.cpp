@@ -153,6 +153,13 @@ bool MPU9255::readMagnetometer() {
     return true;
 }
 
+void MPU9255::update() {
+    readAccelerometer();
+    readGyroscope();
+    readMagnetometer();
+    computeAngles();
+}
+
 void MPU9255::update(const CalibrationData &cal) {
     readAccelerometer();
     readGyroscope();

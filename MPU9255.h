@@ -23,6 +23,9 @@ public:
     // Update all sensor data and compute angles.
     void update(const CalibrationData &cal);
 
+    //Overload update for calibration
+    void update();
+
     // Latest raw sensor data
     int16_t ax, ay, az;   // Accelerometer
     int16_t gx, gy, gz;   // Gyroscope
