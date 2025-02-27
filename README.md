@@ -28,7 +28,7 @@ sudo apt-get install pigpio
 ```
 2. Clone the repo
 ```
-git clone https://github.com/dellancelod/MPU9255-RaspberyPi
+git clone https://github.com/dellancelod/MPU9255-RaspberryPi
 ```
 3. Compile the Code
 
