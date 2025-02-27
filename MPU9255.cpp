@@ -157,6 +157,20 @@ void MPU9255::update() {
     readAccelerometer();
     readGyroscope();
     readMagnetometer();
+
+    // Apply calibration offsets (convert offsets to the same units as raw readings)
+    ax = ax - static_cast<int16_t>(cal.accel_offset[0]);
+    ay = ay - static_cast<int16_t>(cal.accel_offset[1]);
+    az = az - static_cast<int16_t>(cal.accel_offset[2]);
+    
+    gx = gx - static_cast<int16_t>(cal.gyro_offset[0]);
+    gy = gy - static_cast<int16_t>(cal.gyro_offset[1]);
+    gz = gz - static_cast<int16_t>(cal.gyro_offset[2]);
+    
+    mx = mx - static_cast<int16_t>(cal.mag_offset[0]);
+    my = my - static_cast<int16_t>(cal.mag_offset[1]);
+    mz = mz - static_cast<int16_t>(cal.mag_offset[2]);
+
     computeAngles();
 }
 
