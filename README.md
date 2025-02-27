@@ -2,7 +2,7 @@
 Simple minimal functioning example of MPU-9255 for Raspbery Pi using **pigpio** library.
 
 # General Information
-I've bought WaveShare's 10 DOF IMU Sensor (C) but couldn't make MPU9255 display position data due to developers have not provided a working example. MPU9255 is simply MPU9250 with swaped magnetometer (AK8975 insted of AK8963). If you want to use BMP180 functionality you can refer to https://www.waveshare.com/wiki/10_DOF_IMU_Sensor_%28D%29 for working example, because this version uses the same sensor.
+I've bought WaveShare's 10 DOF IMU Sensor (C) but couldn't make MPU9255 display position data due to developers have not provided a working example. MPU9255 is simply MPU9250 with swaped magnetometer (AK8975 instead of AK8963). If you want to use BMP180 functionality you can refer to https://www.waveshare.com/wiki/10_DOF_IMU_Sensor_%28D%29 for working example, because this version uses the same sensor.
 
 # Connection
 
