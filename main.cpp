@@ -3,13 +3,7 @@
 #include <string>
 #include <unistd.h> // for usleep
 #include "MPU9255.h"
-
-
-struct CalibrationData {
-    double accel_offset[3];
-    double gyro_offset[3];
-    double mag_offset[3];
-};
+#include "calibration/CalibrationData.h"
 
 bool loadCalibration(const std::string &filename, CalibrationData &cal) {
     std::ifstream infile(filename);

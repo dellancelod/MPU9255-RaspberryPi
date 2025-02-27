@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <pigpio.h>
+#include "calibration/CalibrationData.h"
 
 // This class wraps MPU9255 operations using pigpio for I2C access.
 // It reads accelerometer, gyroscope, and magnetometer data and computes
@@ -20,7 +21,7 @@ public:
     bool testConnection();
 
     // Update all sensor data and compute angles.
-    void update();
+    void update(const CalibrationData &cal);
 
     // Latest raw sensor data
     int16_t ax, ay, az;   // Accelerometer
