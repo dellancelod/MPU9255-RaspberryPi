@@ -47,3 +47,21 @@ sudo ./mpu9255
 The program will continuously print the pitch, roll, and yaw values to the terminal
 ![image](https://github.com/user-attachments/assets/d85f37bb-86fb-49c4-93c8-63bcf8e5db6c)
 
+# Calibration
+For propper functionality sensor should be calibrated, both acc/gyro and magnetometer offsets saved in a file and further used in a code.
+
+To do this we should compile and run separate script.
+
+1. Compile the code
+
+```
+cd calibration
+g++ -o calibrate_imu calibrate_imu.cpp ../MPU9255.cpp -lpigpio -lrt -lpthread
+```
+2. Run the executable with **sudo**
+```
+sudo ./calibrate_imu
+```
+Follow the instructions in terminal. Offsets will be saved to calibration.txt and loaded in program.
+
+
