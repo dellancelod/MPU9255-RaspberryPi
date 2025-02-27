@@ -1,14 +1,10 @@
 // calibrate.cpp
 #include "../MPU9255.h"
+#include "CalibrationData.h"
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
 
-struct CalibrationData {
-    double accel_offset[3];
-    double gyro_offset[3];
-    double mag_offset[3];
-};
 
 int main() {
     MPU9255 mpu;  // uses default I2C bus (1) and address (0x68)
