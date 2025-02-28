@@ -193,10 +193,10 @@ void MPU9255::computeAngles() {
     pitch = atan2(-ax_g, sqrt(ay_g * ay_g + az_g * az_g)) * 180.0 / M_PI;
 
     // Convert magnetometer raw values to microteslas.
-    // (Assuming a sensitivity factor of ~0.15 uT/LSB; adjust as needed.)
-    double mx_uT = mx * 0.15;
-    double my_uT = my * 0.15;
-    double mz_uT = mz * 0.15;
+    // (Sensitivity factor of ~0.6 uT/LSB from datasheet)
+    double mx_uT = mx * 0.6;
+    double my_uT = my * 0.6;
+    double mz_uT = mz * 0.6;
 
     // Tilt-compensate magnetometer readings for yaw calculation.
     double pitch_rad = pitch * M_PI / 180.0;
