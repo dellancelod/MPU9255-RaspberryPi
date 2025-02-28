@@ -24,6 +24,9 @@ int main() {
         std::cerr << "Failed to initialize MPU9255." << std::endl;
         return -1;
     }
+    if(!mpu.setAccelRange(0)){
+        std::cerr << "Failed to change accelerometer range." << std::endl;
+    }
     if(!mpu.testConnection()){
         std::cerr << "MPU9255 not connected properly." << std::endl;
         return -1;
